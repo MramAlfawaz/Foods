@@ -1,0 +1,26 @@
+<a href="/">Go Back</a>
+
+<form method="POST" action="/food/create" enctype="multipart/form-data">
+  <div>
+    <label>Name: </label>
+    <input name="name" />
+  </div>
+
+  <div>
+    <label>Image: </label>
+    <input type="file" name="filetoupload" />
+  </div>
+
+  <div>
+    <label> ingredients: </label>
+    <select name="ingredients[]" multiple="multiple">
+      <% ingredients.forEach(function(ingredient) { %>
+      <option value="<%= ingredient._id %>">
+        <%= ingredient.name %>
+      </option>
+      <% }) %>
+    </select>
+  </div>
+
+  <button type="submit">Create Food</button>
+</form>

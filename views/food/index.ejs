@@ -1,0 +1,15 @@
+<h1>Foods</h1>
+<% foods.forEach((foods)=>{%>
+
+<div><%= foods.name %></div>
+<div><img src="<%= foods.image %>" alt="Food Image" /></div>
+<div>
+  <% foods.ingredients.forEach((ingredients)=>{ %>
+      <p>
+          <%= ingredients.name %>
+      </p>
+  <img src="<%= ingredients.image %>" alt="Food Image" />
+
+  <% }) %>
+</div>
+<%}) %>
