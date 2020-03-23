@@ -6,7 +6,12 @@ const foodRoute = require('./routes/food')
 const ingredientsRoute = require('./routes/ingredients')
 
 
+
 const app = express()
+
+app.use(express.urlencoded({
+    extended: true
+}))
 
 app.use(foodRoute)
 app.use(ingredientsRoute)

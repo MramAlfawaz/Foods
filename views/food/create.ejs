@@ -13,7 +13,7 @@
 
   <div>
     <label> ingredients: </label>
-    <select name="ingredients[]" multiple="multiple">
+    <select name="ingredients" multiple="multiple">
       <% ingredients.forEach(function(ingredient) { %>
       <option value="<%= ingredient._id %>">
         <%= ingredient.name %>
