@@ -1,0 +1,13 @@
+<h1>ingredient</h1>
+<% Ingredient.forEach((Ingredient)=>{%>
+
+<div><%= Ingredient.name %></div>
+<div>
+  <img
+    src="<%= Ingredient.image %>"
+    alt="Food Image"
+    width="200"
+    height="200"
+  />
+</div>
+<%}) %>

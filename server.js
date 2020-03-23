@@ -3,11 +3,13 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT || 4000
 
 const foodRoute = require('./routes/food')
+const ingredientsRoute = require('./routes/ingredients')
 
 
 const app = express()
 
 app.use(foodRoute)
+app.use(ingredientsRoute)
 app.use(express.static('public'))
 
 app.set('view engine', 'ejs')
